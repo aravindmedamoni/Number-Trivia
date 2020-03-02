@@ -23,7 +23,7 @@ void main() {
     'should get trivia for the number from the repository',
         () async {
       //arrange
-      when(mockNumberTriviaRepository.getConcreteNumberTrivia(any))
+      when(mockNumberTriviaRepository.getRandomNumberTrivia())
           .thenAnswer((_) async => Right(tNumberTrivia));
       //act
       final result = await usecase(NoParams());
